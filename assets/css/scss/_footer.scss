@@ -1,0 +1,279 @@
+.main-footer {
+  .upsell .wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 30px;
+    padding-top: 85px;
+    border-top: 2px solid $footer-divider-color;
+
+    @include size(lg) {
+      padding-bottom: 80px;
+    }
+
+    @include size(md) {
+      padding-top: 80px;
+    }
+  
+    @include size(sm) {
+      padding-top: 70px;
+    }
+  
+    @include size(xs) {
+      padding-top: 65px;
+    }
+  
+    .content {
+      width: 50%;
+      position: relative;
+
+      @include size(lg) {
+        width: 55%;
+      }
+  
+      @include size(md) {
+        width: 60%;
+      }
+  
+      @include size(sm) {
+        width: 65%;
+      }
+  
+      @include size(xs) {
+        width: 70%;
+      }
+  
+      .pre-title {
+        color: $text-color-third;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 1.21em;
+        letter-spacing: 0.10em;
+        text-transform: uppercase;
+        display: block;
+        margin-bottom: 24px;
+      }
+  
+      .title {
+        color: $text-color-secondary;
+        font-size: 56px;
+        font-weight: 900;
+        line-height: 1.16em;
+        margin: 0px 0px 32px 0px;
+      }
+  
+      .text {
+        width: 90%;
+        color: $text-color-primary;
+        font-size: 20px;
+        line-height: 1.5em;
+      }
+  
+      .button {
+        margin-top: 30px;
+      }
+    }
+  
+    .images {
+      width: 50%;
+      display: flex;
+      overflow: hidden;
+  
+      img {
+        margin: auto;
+        object-fit: none;
+        object-position: center;
+      }
+
+      @include size(lg) {
+        width: 45%;  
+      }
+
+      @include size(md) {
+        width: 40%;  
+      }
+        
+      @include size(sm) {
+        width: 35%;
+        height: 100%;
+        position: absolute;
+        right: 0px;
+        z-index: -1;
+  
+        img.right {
+          object-position: left center;
+        }
+      }
+  
+      @include size(xs) {
+        width: 30%;
+      }
+    }
+  }
+
+  .main .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 120px;
+    padding-bottom: 100px;
+    border-top: 2px solid $footer-divider-color;
+    gap: 64px 30px;
+
+    @include size(md) {
+      padding-top: 102px;
+      padding-bottom: 88px;
+    }
+  
+    @include size(sm) {
+      padding-top: 83px;
+      padding-bottom: 76px;
+    }
+  
+    @include size(xs) {
+      padding-top: 64px;
+      padding-bottom: 64px;
+    }
+
+    .footer-content {
+      width: calc(100% / 2 - 15px);
+
+      @include size(sm) {
+        width: 100%;
+      }
+
+      .footer-logo {
+        width: 75%;
+        display: block;
+        margin-bottom: 30px;
+
+        img {
+          height: auto;
+          max-height: 36px;
+        }
+      }
+
+      .text {
+        color: $text-color-primary;
+        font-size: 20px;
+        margin-bottom: 30px;
+      }
+
+      .social-media {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        display: flex;
+
+        li {
+          display: inline-block;
+
+          &:not(:last-child) {
+            margin-right: 16px;
+          }
+
+          a {
+            width: 18px;
+            height: 18px;
+            color: $text-color-primary;
+            font-size: 0px;
+            text-decoration: none;
+            background-repeat: no-repeat;
+            background-position: center;
+            display: block;
+            transition: opacity 0.2s ease-in-out;
+
+            &.facebook {
+              background-image: url('../../assets/images/social-logos/facebook.svg');
+            }
+
+            &.instagram {
+              background-image: url('../../assets/images/social-logos/instagram.svg');
+            }
+
+            &.twitter {
+              background-image: url('../../assets/images/social-logos/twitter.svg');
+            }
+
+            &.tiktok {
+              background-image: url('../../assets/images/social-logos/tiktok.svg');
+            }
+
+            &:hover {
+              opacity: 0.75;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-nav-wrapper {
+      width: calc(100% / 2 - 15px);
+      display: flex;
+      gap: 50px 100px;
+      justify-content: end;
+
+      @include size(lg) {
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      @include size(sm) {
+        width: 100%;
+      }
+
+      @include size(xs) {
+        justify-content: unset;
+      }
+
+      .footer-nav {
+        width: calc(100% / 4 - 15px);
+
+        .title {
+          color: $text-color-primary;
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.21em;
+          text-transform: uppercase;
+          margin: 0px;
+        }
+  
+        .menu {
+          list-style: none;
+          padding: 0px;
+          margin: 28px 0px 0px;
+  
+          .menu-item a {
+            color: $text-color-primary;
+            font-size: 20px;
+            text-decoration: none;
+  
+            &:hover {
+              text-decoration: underline;
+            }
+          }
+  
+          .menu-item + .menu-item {
+            margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .bottom .wrapper {
+    color: $text-color-fifth;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 70px;
+
+    @include size(xs) {
+      .right {
+        display: none;
+      }
+    }
+  }
+}

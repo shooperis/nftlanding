@@ -1,0 +1,148 @@
+body.dark-mode {
+
+  // Page backgrounds colors
+  $background-color: #111111;
+
+  // Texts colors
+  $text-color-primary: #CCCCCC;
+  $text-color-secondary: #FFFFFF;
+  $text-color-third: #FF3998;
+  $text-color-fourth: #FF8139;
+  $text-color-fifth: #999999;
+  $text-color-sixth: #777777;
+
+  // Button and banner background
+  $button-color-bg-gradient: linear-gradient(45deg, #ff3998 0%, #ff8139 40%, #ff3939 70%, #39ffa0 100%);
+
+  // Showcase
+  $card-bg-color: #000000;
+
+  // Footer
+  $footer-divider-color: #555555;
+
+
+
+  color: $text-color-primary;
+  background-color: $background-color;
+
+  .button {
+    color: $text-color-secondary;
+    background-color: $background-color;
+  }
+
+  .main-header {
+    .main-logo img {
+      content: url('../../assets/images/logo-darkmode.svg');
+    }
+
+    .main-navigation {
+      .menu-item a {
+        color: $text-color-primary;
+
+        &::after {
+          background-color: $text-color-primary;
+        }
+      }
+    }
+  }
+
+  .main-content .hero .wrapper .content {
+    .pre-title {
+      color: $text-color-third;
+    }
+
+    .title {
+      color: $text-color-secondary;
+    }
+
+    .text {
+      color: $text-color-primary;
+    }
+  }
+
+  .main-content .showcase .wrapper {
+    >.content {
+      .title {
+        color: $text-color-secondary;
+      }
+  
+      .text {
+        color: $text-color-primary;
+        
+        p a {
+          color: $text-color-primary;
+        }
+      }
+    }
+
+    .list .list-item {
+      background-color: $card-bg-color;
+
+      .item-content ul li span {
+        &.series, &.bid {
+          color: $text-color-sixth;
+        }
+
+        &.series  {
+          color: $text-color-fourth;
+        }
+
+        &.name, &.eth {
+          color: $text-color-secondary;
+        }
+
+        &.number, &.days {
+          color: $text-color-sixth;
+        }
+      }
+    }
+  }
+
+  .main-footer {
+    .upsell .wrapper {
+      border-top-color: $footer-divider-color;
+
+      .content {
+        .pre-title {
+          color: $text-color-third;
+        }
+    
+        .title {
+          color: $text-color-secondary;
+        }
+    
+        .text {
+          color: $text-color-primary;
+        }
+      }
+    }
+
+    .main .wrapper {
+      border-top-color: $footer-divider-color;
+
+      .footer-content {
+        .footer-logo img {
+          content: url('../../assets/images/logo-darkmode.svg');
+        }
+
+        .text {
+          color: $text-color-primary;
+        }
+      }
+
+      .footer-nav-wrapper .footer-nav {
+        .title {
+          color: $text-color-primary;
+        }
+
+        .menu .menu-item a {
+          color: $text-color-primary;
+        }
+      }
+    }
+
+    .bottom .wrapper {
+      color: $text-color-fifth;
+    }
+  }
+}

@@ -1,0 +1,111 @@
+.main-content .hero .wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 30px;
+  padding-top: 20px;
+  padding-bottom: 30px;
+
+  .content {
+    width: calc(100% / 2 - 10px);
+    position: relative;
+
+    @include size(lg) {
+      width: 60%;
+      margin-bottom: 90px;
+    }
+
+    @include size(md) {
+      width: 65%;
+      margin-bottom: 50px;
+    }
+
+    @include size(sm) {
+      width: 70%;
+    }
+
+    @include size(xs) {
+      width: 80%;
+    }
+
+    .pre-title {
+      color: $text-color-third;
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.21em;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 24px;
+    }
+
+    .title {
+      color: $text-color-secondary;
+      font-size: 96px;
+      font-weight: 900;
+      line-height: 1.16em;
+      margin: 0px 0px 32px 0px;
+
+      @include size(md) {
+        font-size: 80px;
+      }
+
+      @include size(sm) {
+        font-size: 64px;
+      }
+
+      @include size(xs) {
+        font-size: 48px;
+      }
+    }
+
+    .text {
+      width: 90%;
+      color: $text-color-primary;
+      font-size: 20px;
+      line-height: 1.5em;
+    }
+
+    .button {
+      margin-top: 30px;
+    }
+  }
+
+  .images {
+    width: calc(100% / 2 - 10px);
+    display: flex;
+
+    img.right {
+      max-width: 100%;
+      margin-left: auto;
+      // object-fit: none;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    @include size(lg) {
+      width: 60%;
+      height: 100%;
+      position: absolute;
+      right: 0px;
+      z-index: -1;
+
+      img.right {
+        object-position: left center;
+      }
+    }
+
+    @include size(md) {
+      width: 65%;  
+    }
+
+    @include size(sm) {
+      width: 70%;
+    }
+
+    @include size(xs) {
+      width: 65%;
+    }
+  }
+}

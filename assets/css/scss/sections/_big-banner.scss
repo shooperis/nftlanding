@@ -1,0 +1,56 @@
+.main-content .big-banner .wrapper {
+  padding-bottom: 120px;
+
+  @include size(md) {
+    padding-left: 0px;
+    padding-right: 0px;
+    max-width: 100%;
+    padding-bottom: 102px;
+  }
+
+  @include size(sm) {
+    padding-bottom: 83px;
+  }
+
+  @include size(xs) {
+    padding-bottom: 64px;
+  }
+
+  .content {
+    min-height: 320px;
+    padding: 64px;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: $text-color-secondary;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: end;
+
+    @include size(md) {
+      border-radius: 0px;
+    }
+
+    >* {
+      width: 100%;
+    }
+
+    .title {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 1.2em;
+      margin: 24px 0px;
+    }
+
+    .text {
+      font-size: 20px;
+      line-height: 1.5em;
+      
+      p {
+        margin: 0px 0px 10px;
+      }
+    }
+  }
+}
